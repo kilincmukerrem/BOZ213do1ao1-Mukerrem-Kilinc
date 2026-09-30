@@ -6,15 +6,15 @@ class Malzeme:
         self.birim = birim
 
 class Tarif:
-    def __init__(self, isim, orjinal_porsiyon, malzemeler, yapilis):
+    def __init__(self, isim, eski_porsiyon, malzemeler, yapilis):
         self.isim = isim
-        self.orjinal_porsiyon = orjinal_porsiyon
+        self.eski_porsiyon = eski_porsiyon
         self.malzemeler = malzemeler
         self.yapilis = yapilis
 
     def porsiyonla(self, yeni_porsiyon):
-        oran = yeni_porsiyon / self.orjinal_porsiyon
-        print(f"\n--- {yeni_porsiyon} Kişilik {self.isim} ---")
+        oran = yeni_porsiyon / self.eski_porsiyon
+        print(f" {yeni_porsiyon} Kişilik {self.isim}")
         print("Malzemeleri:")
         for m in self.malzemeler:
             yeni_miktar = m.miktar * oran
@@ -30,7 +30,7 @@ class Tarif:
 # TARİFLERİN EKLENECEĞİ YER
 tarif_1 = Tarif(
     isim="Mini Cookieler",
-    orjinal_porsiyon=16, 
+    eski_porsiyon=16, 
     malzemeler=[
         Malzeme("Margarin veya Tereyağı", 100, "gram"), 
         Malzeme("Şeker", 0.5, "çay bardağı"), 
@@ -46,7 +46,7 @@ tarif_1 = Tarif(
 
 tarif_2 = Tarif(
     isim="Pratik Elmalı Kurabiye",
-    orjinal_porsiyon=10,     malzemeler=[
+    eski_porsiyon=10,     malzemeler=[
         # Hamur
         Malzeme("Tereyağı (Oda Isısında)", 150, "gram"), 
         Malzeme("Pudra Şekeri", 0.5, "su bardağı"), 
@@ -67,7 +67,7 @@ tarif_2 = Tarif(
 
 tarif_3 = Tarif(
     isim="Şekerpare",
-    orjinal_porsiyon=6, 
+    eski_porsiyon=6, 
     malzemeler=[
         # Hamur
         Malzeme("Tereyağı (Yumuşak)", 125, "gram"), 
@@ -88,7 +88,7 @@ tarif_3 = Tarif(
 
 tarif_4 = Tarif(
     isim="Krema Soslu Tava Böreği",
-    orjinal_porsiyon=6, 
+    eski_porsiyon=6, 
     malzemeler=[
         Malzeme("Yufka", 3, "adet"),
         # İç Harç
@@ -120,7 +120,7 @@ while True:
     if secim == '1':
         print("\nSİSTEMDEKİ TARİFLER:")
         for i, t in enumerate(sistemdeki_tarifler):
-            print(f"{i+1}. {t.isim} ({t.orjinal_porsiyon} Kişilik)")
+            print(f"{i+1}. {t.isim} ({t.eski_porsiyon} Kişilik)")
 
     elif secim == '2':
         aranan = input("\nPorsiyon hesabı yapmak istediğiniz tarifin adını yazın: ").lower()
