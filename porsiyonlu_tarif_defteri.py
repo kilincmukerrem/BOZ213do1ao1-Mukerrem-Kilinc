@@ -27,7 +27,7 @@ class Tarif:
 
 
 
-# TARİF DEFTERİ
+# TARİFLERİN EKLENECEĞİ YER
 tarif_1 = Tarif(
     isim="Mini Cookieler",
     orjinal_porsiyon=16, 
