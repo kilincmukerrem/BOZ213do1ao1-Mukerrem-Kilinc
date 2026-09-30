@@ -1,0 +1,1 @@
+Bu proje, Nesne Tabanlı Programlama (OOP) prensipleri kullanılarak Python ile geliştirilmiş bir uygulamadır. Kullanıcıların sistemde kayıtlı olan yemek tariflerini görüntülemesine ve bu tariflerdeki malzeme miktarlarını istedikleri kişi sayısına göre dinamik olarak hesaplamasına olanak tanır.
